@@ -1,0 +1,37 @@
+[
+{
+"page": "Home",
+"url": "https://atdigital.io/",
+"text": "AT Digital provides web development, AI solutions, and digital marketing services to help businesses grow online."
+},
+{
+"page": "About Us",
+"url": "https://atdigital.io/about",
+"text": "We are a team of developers, designers, and AI specialists committed to delivering innovative digital solutions."
+},
+{
+"page": "Services - AI/ML",
+"url": "https://atdigital.io/services/ai-ml",
+"text": "Our AI/ML services include custom models for automation, predictive analytics, and chatbot integration."
+},
+{
+    "page": "Services - Web Development",
+"url": "https://atdigital.io/services/web-development",
+"text": "We build responsive websites using React, Next.js, and headless CMS solutions like Prismic."
+},
+{
+"page": "Services - Digital Marketing",
+"url": "https://atdigital.io/services/digital-marketing",
+"text": "Our digital marketing services cover SEO, social media campaigns, content creation, and performance analytics."
+},
+{
+"page": "Blog - SEO Tips",
+"url": "https://atdigital.io/blog/seo-tips",
+"text": "Improving website SEO involves optimizing images, metadata, performance, and content for better ranking."
+},
+{
+"page": "Contact",
+"url": "https://atdigital.io/contact",
+"text": "You can reach us via email at contact@atdigital.io or through our contact form on the website."
+}
+]

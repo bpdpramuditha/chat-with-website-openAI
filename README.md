@@ -1,22 +1,22 @@
-🤖 Ask AT Digital – Chatbot with OpenAI + LangChain + Streamlit
+Ask AT Digital – Chatbot with OpenAI + LangChain + Streamlit
 This project is a chatbot application built with Streamlit, LangChain, HuggingFace embeddings, and OpenAI GPT models. It allows users to ask questions about AT Digital’s website, and the chatbot answers using both:
 • The website dataset (website_data.json)
 • Its own knowledge (via GPT) if context is missing
 
 ---
 
-🚀 Features
-✅ Uses LangChain to handle embeddings, retrieval, and conversational memory.
-✅ HuggingFace Sentence Transformers (all-MiniLM-L6-v2) for text embeddings.
-✅ ChromaDB as the vector store for efficient semantic search.
-✅ Custom PromptTemplate ensures the bot always tries to help.
-✅ OpenAI GPT model (gpt-4o-mini) for generating responses.
-✅ Interactive Streamlit UI with chat history.
-✅ Environment variables handled with .env (secure API key storage).
+Features
+• Uses LangChain to handle embeddings, retrieval, and conversational memory.
+• HuggingFace Sentence Transformers (all-MiniLM-L6-v2) for text embeddings.
+• ChromaDB as the vector store for efficient semantic search.
+• Custom PromptTemplate ensures the bot always tries to help.
+• OpenAI GPT model (gpt-4o-mini) for generating responses.
+• Interactive Streamlit UI with chat history.
+• Environment variables handled with .env (secure API key storage).
 
 ---
 
-📂 Project Structure
+Project Structure
 ├── src/
 │ ├── app.py # Main Streamlit app
 │ ├── website_data.json # Website dataset (scraped/stored in JSON)
@@ -25,7 +25,7 @@ This project is a chatbot application built with Streamlit, LangChain, HuggingFa
 
 ---
 
-🛠️ Installation
+Installation
 
 1. Clone the repository
    https://github.com/bpdpramuditha/chat-with-website-openAI.git
@@ -35,20 +35,32 @@ This project is a chatbot application built with Streamlit, LangChain, HuggingFa
    Using conda (recommended):
    • conda create -n ask-at-digital python=3.10 -y conda
    • activate ask-at-digital
+
    Or using venv:
    • python -m venv venv  
    • venv\Scripts\activate # Windows
 
 3. Install dependencies
-   pip install -r requirements.txt
-4. Setup environment variables
+
+   pip install streamlit langchain langchain-community langchain-core openai chromadb sentence-transformers python-dotenv
+
+4. Creating API_KEY
+   • Go to https://platform.openai.com/settings/organization/api-keys
+   • Sign In using a gmail
+   • Click create new secret key
+   • Give a Name
+   • Select project as default
+   • Click create api key
+   • Copy the generated API Key
+
+5. Setup environment variables
    • Create a .env file in the project root:
    • OPENAI_API_KEY=your_openai_api_key_here
-   ⚠️ Replace your_openai_api_key_here with your actual key from OpenAI.
+   Replace your_openai_api_key_here with your actual key from OpenAI.
 
 ---
 
-📑 Dataset Format
+Dataset Format
 The app uses a JSON dataset (src/website_data.json) with the following structure:
 [{"page": "Home", "url": "https://atdigital.io/", "text": "AT Digital provides web development, AI solutions, and digital marketing services to help businesses grow online."},
 { "page": "About Us", "url": "https://atdigital.io/about", "text": "We are a team of developers, designers, and AI specialists committed to delivering innovative digital solutions."},
@@ -60,13 +72,13 @@ The app uses a JSON dataset (src/website_data.json) with the following structure
 
 ---
 
-▶️ Running the App
+Running the App
 Run Streamlit:
 streamlit run src/app.py
 
 ---
 
-💡 How It Works 1. Load Data
+How It Works 1. Load Data
 • Reads website_data.json
 • Splits content into chunks (500 chars with 50 overlap)
 • Embeds chunks with HuggingFace MiniLM model
@@ -80,7 +92,7 @@ streamlit run src/app.py
 
 ---
 
-📜 Example Usage
+Example Usage
 
 1. Start the app with streamlit run src/app.py
 2. Ask (User):
@@ -91,7 +103,7 @@ streamlit run src/app.py
 
 ---
 
-🧰 Requirements
+Requirements
 • Python 3.10
 • Streamlit
 • LangChain
@@ -102,7 +114,5 @@ streamlit run src/app.py
 
 ---
 
-🔒 Security Notes
-• Do not commit your .env file
-• Use .gitignore to exclude secrets
+Security Notes
 • Always set API keys as environment variables when deploying
